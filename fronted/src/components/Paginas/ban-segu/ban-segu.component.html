@@ -1,0 +1,28 @@
+<div class="contenedor" style="background-color: #f4e9cd;">
+  <div class="container mt-5">
+    <h1 class="display-4 text-center" style="color: #031a26;">Bancarización y Seguridad</h1>
+    <p class="lead" style="color: #031a26;">
+      La bancarización es una opción segura y eficiente para manejar tu dinero.
+      En FinClusión, te explicamos sus beneficios y te ayudamos a evitar los riesgos del efectivo.
+      Descubre cómo la inclusión financiera puede transformar tu vida económica.
+    </p>
+    <div class="accordion-container">
+      <mat-accordion>
+        <mat-expansion-panel *ngFor="let contenido of contenidos">
+          <mat-expansion-panel-header style="background-color: #468189;">
+            <mat-panel-title style="color: white;">{{ contenido.titulo }}</mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="card-body"  style="padding-top: 20px;">
+            <p class="card-text">{{ contenido.descripcion }}</p>
+            <div *ngFor="let subapartado of contenido.subapartados">
+              <h5 style="color: #031a26;">{{ subapartado.titulo }}</h5>
+              <ul>
+                <li *ngFor="let item of subapartado.items" style="color: #031a26;">{{ item }}</li>
+              </ul>
+            </div>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+  </div>
+</div>

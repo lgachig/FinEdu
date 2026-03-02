@@ -1,0 +1,197 @@
+.contenedor {
+  padding: 60px 20px 80px;
+  background: linear-gradient(135deg, #f4e9cd 0%, #ffffff 100%);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.text-center {
+  margin-bottom: 40px;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+.text-center h2 {
+  color: #468189;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.text-center .lead {
+  color: #555;
+  font-size: 1.2rem;
+}
+
+mat-tab-group {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.conte {
+  background-color: white;
+  padding: 30px;
+  border-radius: 0 0 16px 16px;
+}
+
+.conte h4 {
+  color: #468189;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.conte p {
+  color: #555;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.conte ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 15px;
+}
+
+.conte ul li {
+  padding: 10px 0;
+  color: #555;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+}
+
+.conte ul li:last-child {
+  border-bottom: none;
+}
+
+.conte ul li::before {
+  content: "✓";
+  color: #468189;
+  font-weight: bold;
+  margin-right: 12px;
+  font-size: 1.2rem;
+}
+
+.mt-5 {
+  margin-top: 60px !important;
+}
+
+.mt-5 h3 {
+  color: #468189;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.mat-mdc-form-field {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.mat-elevation-z8 {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+table {
+  width: 100%;
+}
+
+th {
+  background-color: #468189 !important;
+  color: white !important;
+  font-weight: 600;
+  padding: 15px !important;
+  text-align: left;
+}
+
+td {
+  padding: 15px !important;
+  color: #555;
+}
+
+td ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+td ul li {
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+}
+
+td ul li::before {
+  content: "•";
+  color: #468189;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #77aca2 0%, #468189 100%);
+  border: none;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(70, 129, 137, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(70, 129, 137, 0.4);
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 992px) {
+  .contenedor {
+    padding: 40px 15px;
+  }
+
+  .text-center h2 {
+    font-size: 2rem;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+
+  th, td {
+    padding: 10px !important;
+  }
+}
+
+

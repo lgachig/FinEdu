@@ -1,0 +1,111 @@
+.about-me-container {
+  padding: 60px 20px;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.introduction {
+  text-align: center;
+  margin: 0 auto 60px;
+  padding: 40px 20px;
+  max-width: 900px;
+  background: linear-gradient(135deg, #ffffff 0%, #f4e9cd 100%);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #031a26;
+  background: linear-gradient(135deg, #468189 0%, #77aca2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.description {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+.row {
+  margin-bottom: 40px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+mat-card {
+  height: 100%;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+  border: none;
+  overflow: hidden;
+}
+
+mat-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+mat-card-title {
+  font-size: 2.2em;
+  font-weight: 700;
+  color: #468189;
+  margin-bottom: 10px;
+}
+
+mat-card-subtitle {
+  font-size: 1.2em;
+  color: #77aca2;
+  font-weight: 500;
+}
+
+mat-card-content {
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: #555;
+  padding-top: 15px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1.1rem;
+  }
+
+  .about-me-container {
+    padding: 40px 15px;
+  }
+}
+
+div{
+  margin: 30px 0px; /* Espacio debajo de cada elemento */
+}

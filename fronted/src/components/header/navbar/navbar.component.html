@@ -1,0 +1,75 @@
+<!-- Header Responsive con menú hamburguesa -->
+<header style="background-color: #031a26;">
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <!-- Logo y nombre de la aplicación -->
+    <div class="navbar-brand">
+      <img src="/assets/fonlogo.png" alt="FinEdu Logo" class="logo-img">
+      <span class="brand-text">FinEdu</span>
+    </div>
+
+    <!-- Botón hamburguesa para dispositivos móviles -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="isMenuOpen">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menú navegación -->
+    <div class="navbar-collapse" [ngClass]="{'show': isMenuOpen}">
+      <ul class="navbar-nav ms-auto">
+        <!-- Enlaces sin autenticar -->
+        <li class="nav-item" *ngIf="!statusUser">
+          <a class="nav-link" routerLink="/home" routerLinkActive="active" (click)="closeMenu()">
+            🏠 Home
+          </a>
+        </li>
+        <li class="nav-item" *ngIf="!statusUser">
+          <a class="nav-link" routerLink="/registrar" routerLinkActive="active" (click)="closeMenu()">
+            📝 Registrar
+          </a>
+        </li>
+        <li class="nav-item" *ngIf="!statusUser">
+          <a class="nav-link" routerLink="/login" routerLinkActive="active" (click)="closeMenu()">
+            🔐 Login
+          </a>
+        </li>
+
+        <!-- Enlace para cerrar sesión -->
+        <li class="nav-item" *ngIf="statusUser">
+          <a class="nav-link exit-btn" (click)="exitSesion()" (click)="closeMenu()">
+            🚪 Salir
+          </a>
+        </li>
+
+        <!-- Enlaces principales -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/edu-fina" routerLinkActive="active" (click)="closeMenu()">
+            📚 Educación Financiera
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/com-banco" routerLinkActive="active" (click)="closeMenu()">
+            🏦 Comparador de Bancos
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/ban-segu" routerLinkActive="active" (click)="closeMenu()">
+            🔒 Bancarización
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/recursos" routerLinkActive="active" (click)="closeMenu()">
+            📦 Recursos
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home" fragment="footer-section" routerLinkActive="active" (click)="closeMenu()">
+            ✉️ Contactos
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>

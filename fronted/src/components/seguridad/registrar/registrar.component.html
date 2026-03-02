@@ -1,0 +1,46 @@
+<div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 80vh;">
+  <div class="col-md-8 text-center">
+    <img src="/assets/fonlogo.png" alt="FinClusión" class="logo mb-3">
+  </div>
+
+  <div>
+    <section style="width: 400px;">
+      <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px" (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <div class="d-flex flex-column mb-5">
+          <mat-form-field class="example-full-width">
+            <mat-label>Nombre</mat-label>
+            <input type="text" matInput placeholder="Ingresa tu nombre" ngModel name="name" required #nombreInput="ngModel">
+            <mat-error *ngIf="nombreInput.hasError('required')">Requerido</mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Apellido</mat-label>
+            <input type="text" matInput placeholder="Ingresa tu apellido" ngModel name="lname" required #apellidoInput="ngModel">
+            <mat-error *ngIf="apellidoInput.hasError('required')">Requerido</mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Edad</mat-label>
+            <input type="number" matInput placeholder="Edad" ngModel name="age" required #ageInput="ngModel">
+            <mat-error *ngIf="ageInput.hasError('required')">Requerido</mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Gmail</mat-label>
+            <input type="email" matInput placeholder="lgachig@uce.edu.ec" ngModel name="mail" email required #emailInput="ngModel">
+            <mat-error *ngIf="emailInput.hasError('email')">Por favor ingresa un correo valido</mat-error>
+            <mat-error *ngIf="emailInput.hasError('required')">Requerido</mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width" hintLabel="7 characters">
+            <mat-label>Password</mat-label>
+            <input type="password" matInput placeholder="Ingresa password" ngModel name="password" required minlength="7" #pasInput="ngModel">
+            <mat-error *ngIf="pasInput.hasError('required')">Requerido</mat-error>
+            <mat-error *ngIf="pasInput.hasError('minlength')">Mínimo 7 caracteres</mat-error>
+          </mat-form-field>
+        </div>
+        <button type="submit" mat-raised-button color="primary" [disabled]="f.invalid">Registrar</button>
+      </form>
+    </section>
+  </div>
+</div>

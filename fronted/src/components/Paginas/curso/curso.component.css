@@ -1,0 +1,131 @@
+.contenedor {
+  min-height: calc(100vh - 350px);
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f4e9cd 0%, #ffffff 100%);
+}
+
+.container-fluid {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+h2 {
+  color: #468189;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+mat-nav-list {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  position: sticky;
+  top: 20px;
+}
+
+mat-list-item {
+  cursor: pointer;
+  font-weight: 600;
+  padding: 15px;
+  margin: 5px 0;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  color: #555;
+}
+
+mat-list-item:hover {
+  background: linear-gradient(135deg, #77aca2 0%, #468189 100%);
+  color: white;
+  transform: translateX(5px);
+}
+
+mat-expansion-panel {
+  margin-top: 20px;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border: none;
+}
+
+mat-expansion-panel-header {
+  background: linear-gradient(135deg, #468189 0%, #77aca2 100%);
+  color: white;
+  padding: 20px;
+}
+
+mat-panel-title {
+  color: white !important;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+mat-expansion-panel .mat-expansion-panel-body {
+  padding: 25px;
+}
+
+mat-expansion-panel p {
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+iframe {
+  width: 100%;
+  height: 400px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin: 15px 0;
+}
+
+mat-expansion-panel a {
+  color: #468189;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+mat-expansion-panel a:hover {
+  color: #77aca2;
+  transform: translateX(5px);
+}
+
+button[mat-button] {
+  margin-top: 30px;
+  background: linear-gradient(135deg, #77aca2 0%, #468189 100%);
+  color: white;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(70, 129, 137, 0.3);
+}
+
+button[mat-button]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(70, 129, 137, 0.4);
+}
+
+@media (max-width: 768px) {
+  .contenedor {
+    padding: 20px 10px;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  mat-nav-list {
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  iframe {
+    height: 250px;
+  }
+}
+

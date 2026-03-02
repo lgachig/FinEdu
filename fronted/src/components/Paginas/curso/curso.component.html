@@ -1,0 +1,102 @@
+
+<div class="contenedor">
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Menú de Módulos -->
+      <div class="col-md-3">
+        <mat-nav-list>
+          <mat-list-item (click)="seleccionarModulo('modulo1')">Módulo 1: Fundamentos de Educación Financiera</mat-list-item>
+          <mat-list-item (click)="seleccionarModulo('modulo2')">Módulo 2: Gestión del Dinero y Presupuesto</mat-list-item>
+          <mat-list-item (click)="seleccionarModulo('modulo3')">Módulo 3: Inversión y Crecimiento del Dinero</mat-list-item>
+          <mat-list-item (click)="seleccionarModulo('modulo4')">Módulo 4: Finanzas Personales y Hábitos de Riqueza</mat-list-item>
+        </mat-nav-list>
+      </div>
+
+      <!-- Contenido de los módulos -->
+      <div class="col-md-9">
+        <!-- Módulo 1 -->
+        <div *ngIf="moduloSeleccionado === 'modulo1'">
+          <h2>Fundamentos de Educación Financiera</h2>
+          <p>En este módulo, aprenderás los principios esenciales de la educación financiera y su importancia en la vida diaria.</p>
+
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>¿Qué es la educación financiera y por qué es importante?</mat-panel-title>
+            </mat-expansion-panel-header>
+            <p>La educación financiera es clave para tomar decisiones económicas inteligentes...</p>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/th56_4lLHXA" frameborder="0" allowfullscreen></iframe>
+            <p><a href="https://www.uala.com.mx/assets/legales/introduccion-a-las-finanzas-personales.pdf" target="_blank">📄 PDF descargable</a></p>
+          </mat-expansion-panel>
+
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>Conceptos básicos: ingresos, gastos, ahorro e inversión</mat-panel-title>
+            </mat-expansion-panel-header>
+            <p>Descubre los pilares fundamentales de las finanzas personales...</p>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/2VyDg5cyJQY" frameborder="0" allowfullscreen></iframe>
+            <p><a href="https://formacion.intef.es/tutorizados_2013_2019/pluginfile.php/110188/mod_resource/content/2/FINANZAS_15_31_03_B2_T1_Conceptos1.pdf" target="_blank">📄 PDF descargable</a></p>
+          </mat-expansion-panel>
+
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>Cómo establecer metas financieras realistas</mat-panel-title>
+            </mat-expansion-panel-header>
+            <p>Tener metas claras te ayuda a mejorar tu futuro financiero...</p>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/QU3nHwJaNNI" frameborder="0" allowfullscreen></iframe>
+          </mat-expansion-panel>
+
+          <button mat-button color="primary" (click)="irAPrueba('modulo1')">Iniciar prueba</button>
+        </div>
+
+        <!-- Módulo 2 -->
+        <div *ngIf="moduloSeleccionado === 'modulo2'">
+          <h2>Gestión del Dinero y Presupuesto</h2>
+          <p>Este módulo se enfoca en estrategias prácticas para administrar tu dinero de manera efectiva.</p>
+
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>Cómo hacer un presupuesto personal o familiar</mat-panel-title>
+            </mat-expansion-panel-header>
+            <p>Un presupuesto es la clave para el control financiero...</p>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/f2O4Q-T12FI" frameborder="0" allowfullscreen></iframe>
+            <p><a href="https://www.cfn.fin.ec/wp-content/uploads/2018/08/2-MODULO-II.pdf" target="_blank">📄 PDF descargable</a></p>
+          </mat-expansion-panel>
+
+          <button mat-button color="primary" (click)="irAPrueba('modulo2')">Iniciar prueba</button>
+        </div>
+
+        <!-- Módulo 3 -->
+        <div *ngIf="moduloSeleccionado === 'modulo3'">
+          <h2>Inversión y Crecimiento del Dinero</h2>
+          <p>En este módulo, conocerás las bases de la inversión y cómo hacer crecer tu dinero a largo plazo.</p>
+
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>Introducción a la inversión: tipos y riesgos</mat-panel-title>
+            </mat-expansion-panel-header>
+            <p>Descubre qué significa invertir...</p>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/W-dSkdzPM94" frameborder="0" allowfullscreen></iframe>
+          </mat-expansion-panel>
+
+          <button mat-button color="primary" (click)="irAPrueba('modulo3')">Iniciar prueba</button>
+        </div>
+
+        <!-- Módulo 4 -->
+        <div *ngIf="moduloSeleccionado === 'modulo4'">
+          <h2>Finanzas Personales y Hábitos de Riqueza</h2>
+          <p>Este módulo te enseñará cómo aplicar la educación financiera en tu vida cotidiana.</p>
+
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>Educación financiera en el día a día</mat-panel-title>
+            </mat-expansion-panel-header>
+            <p>Aprende cómo pequeños cambios en tus hábitos pueden ayudarte...</p>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/5PAIPVjGMt4" frameborder="0" allowfullscreen></iframe>
+          </mat-expansion-panel>
+          <button mat-button color="primary" (click)="irAPrueba('modulo4')">Iniciar prueba</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

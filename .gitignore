@@ -45,3 +45,6 @@ Thumbs.db
 # Cobertura
 coverage/
 **/coverage/
+
+# Backup de repos anidados (local)
+**/.git_backup_nested_repo/

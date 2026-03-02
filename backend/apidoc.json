@@ -1,0 +1,16 @@
+{
+  "name": "FinEdu API",
+  "version": "1.0.0",
+  "description": "API REST para la plataforma de educación financiera FinEdu",
+  "title": "Documentación FinEdu API",
+  "url": "http://localhost:5009/api",
+  "sampleUrl": "http://localhost:5009/api",
+  "header": {
+    "title": "Información General",
+    "content": "# FinEdu API\n\nAPI REST para la plataforma de educación financiera FinEdu en Ecuador.\n\n## Autenticación\n\nLos endpoints protegidos requieren un token JWT en el header:\n\n```\nAuthorization: Bearer <token>\n```\n\n## Respuestas\n\nTodas las respuestas están en formato JSON:\n\n### Respuesta Exitosa\n```json\n{\n  \"success\": true,\n  \"data\": {...},\n  \"token\": \"opcional\"\n}\n```\n\n### Respuesta con Error\n```json\n{\n  \"success\": false,\n  \"error\": \"mensaje de error\"\n}\n```\n\n## Códigos de Estado HTTP\n\n- **200**: OK - Solicitud exitosa\n- **201**: Created - Recurso creado\n- **400**: Bad Request - Solicitud inválida\n- **401**: Unauthorized - No autenticado\n- **404**: Not Found - Recurso no encontrado\n- **500**: Server Error - Error del servidor\n"
+  },
+  "footer": {
+    "title": "Notas",
+    "content": "Documentación generada automáticamente con ApiDoc.\n\nPara más información, visita el repositorio del proyecto."
+  }
+}

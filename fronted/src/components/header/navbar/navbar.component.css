@@ -1,0 +1,310 @@
+/* ========================================
+   HEADER - Barra de Navegación Responsive
+   ======================================== */
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1050;
+  background-color: #031a26;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+header:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Navbar principal */
+.navbar {
+  padding: 0.75rem 1.5rem;
+}
+
+/* Logo y marca */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #f4e9cd;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+  margin-right: 12px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  transition: all 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+}
+
+.brand-text {
+  background: linear-gradient(135deg, #77aca2 0%, #f4e9cd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 2px;
+}
+
+/* Botón hamburguesa */
+.navbar-toggler {
+  border: 2px solid #77aca2;
+  padding: 0.25rem 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.25rem rgba(119, 172, 162, 0.25);
+  border-color: #f4e9cd;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23f4e9cd' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Contenedor del menú */
+.navbar-collapse {
+  transition: all 0.3s ease;
+}
+
+.navbar-collapse.show {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 1rem 0;
+  border-radius: 0 0 8px 8px;
+}
+
+/* Lista de navegación */
+.navbar-nav {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+/* Items de navegación */
+.nav-item {
+  margin: 0;
+  transition: all 0.3s ease;
+}
+
+/* Enlaces de navegación */
+.nav-link {
+  color: #f4e9cd !important;
+  font-weight: 500;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+  display: block;
+}
+
+/* Efecto línea inferior en enlace activo/hover */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #77aca2;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 80%;
+}
+
+/* Enlace activo */
+.nav-link.active {
+  background-color: rgba(119, 172, 162, 0.15);
+  color: #77aca2 !important;
+  font-weight: 600;
+}
+
+/* Efecto hover en enlace */
+.nav-link:hover {
+  background-color: rgba(244, 233, 205, 0.1);
+  color: #77aca2 !important;
+  transform: translateY(-2px);
+}
+
+/* Botón especial para salir */
+.nav-link.exit-btn {
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+  color: white !important;
+  font-weight: 600;
+  padding: 10px 16px;
+}
+
+.nav-link.exit-btn:hover {
+  background: linear-gradient(135deg, #c82333 0%, #bd2130 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+}
+
+.nav-link.exit-btn::after {
+  display: none;
+}
+
+/* ========================================
+   RESPONSIVE - Tablet (768px - 992px)
+   ======================================== */
+
+@media (max-width: 991.98px) {
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.3rem;
+  }
+
+  .logo-img {
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+  }
+
+  .navbar-collapse.show {
+    background-color: rgba(0, 0, 0, 0.4);
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    gap: 0.25rem;
+    justify-content: flex-start;
+  }
+
+  .nav-link {
+    padding: 12px 16px;
+    border-radius: 6px;
+  }
+}
+
+/* ========================================
+   RESPONSIVE - Móvil (< 768px)
+   ======================================== */
+
+@media (max-width: 767.98px) {
+  header {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .navbar {
+    padding: 0.5rem;
+    gap: 0.5rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem;
+    flex-grow: 1;
+  }
+
+  .logo-img {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+  }
+
+  .brand-text {
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+
+  .navbar-toggler {
+    border: 1px solid #77aca2;
+  }
+
+  .navbar-collapse {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .navbar-collapse.show {
+    max-height: 500px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 0.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .nav-link {
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+
+  .nav-link.active {
+    background-color: rgba(119, 172, 162, 0.25);
+    border-left: 4px solid #77aca2;
+    padding-left: 12px;
+  }
+
+  .nav-link:hover {
+    background-color: rgba(244, 233, 205, 0.15);
+    transform: none;
+  }
+}
+
+/* ========================================
+   RESPONSIVE - Móvil Pequeño (< 480px)
+   ======================================== */
+
+@media (max-width: 479.98px) {
+  .navbar {
+    padding: 0.35rem;
+  }
+
+  .navbar-brand {
+    font-size: 1rem;
+  }
+
+  .logo-img {
+    width: 36px;
+    height: 36px;
+    margin-right: 6px;
+  }
+
+  .brand-text {
+    display: none;
+  }
+
+  .navbar-nav {
+    gap: 0.25rem;
+  }
+
+  .nav-link {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+}
+
