@@ -83,3 +83,7 @@ La aplicación estará disponible en:
 
 - [README del Backend](./backend/README.md) - Documentación detallada de la API
 - [README del Frontend](./fronted/README.md) - Guía del frontend
+
+## 👨‍💻 Autor
+
+**Luis Achig**
